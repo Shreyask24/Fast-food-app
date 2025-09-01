@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# 🍔 Food Delivery App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern **React Native Food Delivery App** built following the JavaScript Mastery tutorial.  
+It features authentication, search & filtering, cart management, and backend integration with **Appwrite**.
 
-## Get started
+---
 
-1. Install dependencies
+## Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **React Native (Expo)** – Cross-platform mobile framework  
+- **NativeWind (Tailwind CSS)** – Utility-first styling  
+- **Appwrite** – Authentication, database, and file storage  
+- **Zustand** – Lightweight state management  
+- **Sentry** – Error monitoring & performance tracking  
+- **Expo Router** – Navigation and routing  
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Features
 
-In the output, you'll find options to open the app in a
+- 🔐 Authentication (Login / Signup with Appwrite)  
+- 🏠 Home screen with categories and featured items  
+- 🔎 Search & filter food items by category or keyword  
+- 🍽️ Menu item components with dynamic rendering  
+- 🛒 Cart functionality with global state  
+- 🗄️ Database architecture and seeded collections via Appwrite  
+- 📊 Error tracking with Sentry  
+- 📱 Smooth tab navigation  
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Project Structure
 
 ```bash
-npm run reset-project
+/
+├── assets/          # Images, fonts, icons
+├── components/      # Reusable UI components
+├── screens/         # App screens (Home, Auth, Search, Cart, etc.)
+├── store/           # Zustand store (auth, cart, global state)
+├── services/        # Appwrite config, API services
+├── navigation/      # Routing & tab navigation setup
+├── utils/           # Helpers (filters, constants)
+├── App.tsx          # Entry point
+├── tailwind.config.js
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. Clone the repo
+```bash
+git clone <your-repo-url>
+cd food-delivery-app
+```
 
-## Learn more
+2. Install dependencies
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Setup environment variables
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Copy .env.example to .env and add your Appwrite credentials:
 
-## Join the community
+EXPO_PUBLIC_APPWRITE_ENDPOINT=<your-endpoint>
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=<your-project-id>
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=<your-db-id>
+EXPO_PUBLIC_APPWRITE_BUCKET_ID=<your-bucket-id>
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. Run the app
+```bash
+npx expo start
+```
