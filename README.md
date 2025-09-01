@@ -47,7 +47,7 @@ It features authentication, search & filtering, cart management, and backend int
 
 1. Clone the repo
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Shreyask24/Fast-food-app.git
 cd food-delivery-app
 ```
 
